@@ -4,7 +4,7 @@ import { webkit,chromium,firefox } from '@playwright/test';
 test('Registration Test', async function()
     {
         const AUT_URL:string = "https://naveenautomationlabs.com/opencart/index.php?route=account/login";
-        const Chrome:Browser = await chromium.launch({headless:false});
+        const Chrome:Browser = await chromium.launch({headless:true});
         const pages:Page = await Chrome.newPage();
         await pages.goto(AUT_URL);
         const registerbtn = await pages.locator('//a[text()="Continue"]');

@@ -3,7 +3,7 @@ import {test, expect, Browser, Page, Locator} from '@playwright/test';
 
 test('Login Test', async ()=>
     {
-        const chrome:Browser = await chromium.launch({headless:false});
+        const chrome:Browser = await chromium.launch({headless:true});
         const page:Page = await chrome.newPage();
         await page.goto('https://naveenautomationlabs.com/opencart/index.php?route=account/login');
         await page.screenshot({path:'./Screenshots/logintest.png'});
